@@ -1,0 +1,422 @@
+:root {
+    --main-color: #fd3b30;
+    --title-color: #ffd327;
+    --text-color: #02201a;
+}
+
+*, *::after, *::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Custom Scrollbar */
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 200px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+::-webkit-scrollbar-thumb:active {
+    background-color: rgb(29, 29, 29);
+}
+
+img {
+    display: block;
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    direction: rtl;
+    font-family: 'Cairo', sans-serif;
+}
+
+.row > div {
+    padding: 0 20px;
+}
+
+.title {
+    font-size: 40px;
+    text-align: center;
+    font-weight: bold;
+    color: var(--main-color);
+}
+
+@media (max-width: 1200px) {
+    .title {
+        font-size: 30px !important;
+    }
+}
+
+.main-text {
+    font-size: 18px;
+    color: var(--text-color);
+}
+/* __________________ */
+
+.main-page {
+    width: 97vw;
+    margin: auto;
+    min-height: 100vh;
+    padding-bottom: 20px;
+    overflow: hidden !important;
+}
+
+.content {
+    padding: 0 20px;
+    padding-left: 0;
+}
+
+.main-title {
+    color: var(--title-color);
+    padding: 4px 0;
+    padding-bottom: 14px;
+    font-size: 40px;
+    font-weight: bold;
+    position: relative;
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    margin: auto;
+    font-weight: 900;
+}
+
+@media (max-width: 1200px) {
+    .main-title {
+        font-size: 30px !important;
+    }
+}
+
+.main-title img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* Start First Column */
+
+.column {
+    padding-top: 20px;
+}
+
+.content .first .title {
+    font-size: 40px;
+    text-align: center;
+    color: var(--main-color);
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.content .main-title {
+    margin-bottom: 20px;
+}
+
+.content .image {
+    margin-bottom: 20px;
+}
+
+.content .image img {
+    width: 70%;
+    margin: auto;
+}
+
+.content .first .main-text {
+    margin-bottom: 20px;
+}
+
+.content .info .name {
+    font-size: 20px;
+    font-weight: 900;
+    color: var(--main-color);
+}
+
+.content .info {
+    align-items: center !important;
+}
+
+.content .info .price .num {
+    font-size: 30px;
+    font-weight: 900;
+    color: var(--main-color);
+}
+
+.content .info .price span:first-child {
+    font-size: 15px;
+    color: var(--main-color);
+    font-weight: bold;
+}
+
+/* Drinks */
+
+.content .drinks .main-title {
+    font-size: 20px;
+    padding: 10px;
+}
+
+.content .drinks > div:first-child {
+    padding-left: 20px;
+    border-left: 2px solid var(--main-color);
+}
+
+.content .drinks > div:last-child {
+    padding-right: 20px;
+}
+
+.content .drinks>* {
+    width: 50%;
+}
+
+@media (max-width: 1300px) {
+    .drinks {
+        flex-wrap: wrap;
+    }
+    .content .drinks>* {
+        width: 100% !important;
+        padding: 0 !important;
+        border: 0 !important;
+    }    
+}
+
+.content .drinks .price {
+
+    font-size: 18px;
+    color: var(--main-color);
+    font-weight: bold;
+}
+
+.content .drinks .name {
+    font-size: 18px !important;
+}
+
+.content .text-row {
+    margin-bottom: 20px;
+}
+
+.content .text-row .red {
+    color: var(--main-color);
+}
+
+.content .second .super {
+    padding-top: 20px;
+    position: relative;
+}
+
+.content .second .super::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 60%;
+    top: 10px;
+    height: 3px;
+    background-color: var(--main-color);
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.content .second .super .main-text {
+    color: var(--text-color);
+    text-align: center;
+}
+
+.content .second .additives {
+    margin-top: 20px;
+}
+
+.content .second .additives .title {
+    font-size: 20px;
+    color: black;
+}
+
+.content .second .additives .content {
+    max-height: 200px;
+    overflow-y: scroll;
+    background-color: var(--title-color);
+    border-radius: 5px;
+}
+
+.content .second .additives .content-row {
+    margin-bottom: 10px;
+}
+
+.content .second .additives .content-row .price span:first-child {
+    font-size: 15px;
+    color: var(--main-color);
+    font-weight: bold;
+}
+
+.content .second .additives .content-row .price span:last-child {
+    font-size: 30px;
+    font-weight: 900;
+    color: var(--main-color);
+}
+
+/* Third Column */
+
+.content .type > div {
+    background-color: var(--main-color);
+    color: var(--title-color);
+    font-size: 18px;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-weight: bold;
+}
+
+/* Fourth Column */
+
+.content .four {
+    width: 100%;
+    position: relative;
+    background-color: var(--text-color);
+    padding-left: 0;
+    height: 100vh;
+    overflow-y: auto;
+    direction: ltr;
+}
+
+@media (max-width: 992px) {
+    .content .four {
+        position: fixed;
+        left: 0;
+        width: 300px;
+        z-index: 100;
+        top: 0;
+        transition: 0.3s;
+    }
+
+    .content .four.hide {
+        left: -100%;
+    }
+}
+
+.four .image {
+    padding-top: 40px;
+}
+
+.four .image img {
+    width: 50%;
+    margin: auto;
+}
+
+.four .image  + h1 {
+    font-size: 60px;
+    font-weight: 900;
+    text-align: center;
+    width: fit-content;
+    margin: auto;
+    max-width: 100%;
+    color: #EEDEA3;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.four .image  + h1::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    border-radius: 50%;
+    border-bottom-right-radius: 0;
+    right: -20Px;
+    width: 15px;
+    height: 15px;
+    background-color: var(--main-color);
+}
+
+.four .image  + h1 + p {
+    color: #EEDEA3;
+    text-align: center;
+    font-size: 25px;
+    max-width: 90%;
+    margin: auto;
+    margin-bottom: 60px;
+}
+
+.four .image  + h1 + p span {
+    letter-spacing: 3px;
+}
+
+.four .qr-code img {
+    max-width: 100%;
+    width: 25%;
+}
+
+.four .number {
+    font-size: 30px;
+    color: var(--title-color);
+    text-align: center;
+}
+
+.four .adress {
+    max-width: 90%;
+    margin: auto;
+}
+
+.four .info {
+    color: var(--title-color);
+}
+
+.four .phone img {
+    margin: auto;
+}
+
+@media (max-width: 1200px) {
+    .four .image  + h1 {
+        font-size: 30px;
+    }
+
+    .four .image  + h1 + p {
+        font-size: 15px !important;
+    }
+
+    .four .number {
+        font-size: 15px;
+    }
+}
+
+/* Bars Menue */
+
+.bars {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background-color: var(--title-color);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.bars img {
+    width: 25px;
+    height: 25px;
+}
+
+/* Start Page 2 */
+
