@@ -400,7 +400,7 @@ body {
 /* Bars Menue */
 
 .bars {
-    position: absolute;
+    position: fixed;
     right: 10px;
     top: 10px;
     background-color: var(--title-color);
@@ -411,6 +411,7 @@ body {
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    z-index: 1000;
 }
 
 .bars img {
@@ -420,3 +421,62 @@ body {
 
 /* Start Page 2 */
 
+.page-2 .title.t {
+    position: relative;
+}
+
+.page-2 .title.t::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 60%;
+    top: 10px;
+    height: 3px;
+    background-color: var(--main-color);
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.page-2 .main-title.d {
+    width: fit-content;
+    padding: 4px 20px;
+    font-size: 30px;
+}
+
+.page-2 .main-title span.le {
+    font-size: 20px;
+}
+
+/* Second Column */
+
+.page-2 .second-column .title {
+    color: var(--text-color);
+}
+
+.page-2 .additions img {
+    max-width: 100%;
+}
+
+.page-2 .additions .title {
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.page-2 .additions .img {
+    position: relative;
+}
+
+.page-2 .additions .main-title {
+    position: absolute;
+    right: 0;
+    bottom: -36px;
+    z-index: 100;
+}
+
+.page-2 .third-column .title {
+    color: var(--text-color);
+}
+
+.page-2 .additions .title {
+    color: var(--main-color) !important;
+}
